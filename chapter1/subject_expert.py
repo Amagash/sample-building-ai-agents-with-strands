@@ -1,12 +1,12 @@
 import logging
 from strands import Agent
 
-# Enable debug logging for Strands
-logging.getLogger("strands").setLevel(logging.DEBUG)
-logging.basicConfig(
-    format="%(levelname)s | %(name)s | %(message)s",
-    handlers=[logging.StreamHandler()]
-)
+# # Enable debug logging for Strands
+# logging.getLogger("strands").setLevel(logging.DEBUG)
+# logging.basicConfig(
+#     format="%(levelname)s | %(name)s | %(message)s",
+#     handlers=[logging.StreamHandler()]
+# )
 
 # Create a basic agent with a specialized system prompt
 subject_expert = Agent(
@@ -27,5 +27,21 @@ subject_expert = Agent(
     """
 )
 
-# The response will be automatically printed by the Agent class
-response = subject_expert("Explain the concept of recursion in programming.")
+def interactive_session():
+    print("Computer Science Subject Expert Agent")
+    print("-----------------------------------------------------------")
+    
+    while True:
+        # Get user input
+        user_input = input("\nYour question (type 'exit' to quit): ")
+        
+        if user_input.lower() in ["exit", "quit", "bye"]:
+            print("Goodbye!")
+            break
+        
+        # Send the input to the agent, which will automatically print the response
+        print("\nThinking...\n")
+        subject_expert(user_input)
+
+if __name__ == "__main__":
+    interactive_session()
