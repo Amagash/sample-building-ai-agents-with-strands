@@ -194,3 +194,4 @@ cython_debug/
 .cursorindexingignore
 
 .test/*
+cs_glossary.json
