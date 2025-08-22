@@ -5,7 +5,7 @@ import uvicorn
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from workshop_utils import A2AClientToolProvider
+from utils import A2AClientToolProvider
 
 # Define request model for the inquire endpoint
 class InquireRequest(BaseModel):
