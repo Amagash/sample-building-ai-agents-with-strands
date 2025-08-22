@@ -1,0 +1,28 @@
+POST http://0.0.0.0:8009/inquire
+
+{
+    "question": "look up on wikipedia the release date of the lord of the ring?"
+}
+###
+
+POST http://0.0.0.0:8009/inquire
+
+{
+    "question": "What are the agents you have access to ?"
+}
+
+###
+
+POST http://0.0.0.0:8009/inquire
+
+{
+    "question": "What is the current time ?"
+}
+
+###
+
+POST http://0.0.0.0:8009/inquire
+
+{
+    "question": "What is the antiderivative of 2x^3"
+}
