@@ -195,3 +195,5 @@ cython_debug/
 
 .test/*
 cs_glossary.json
+
+.kiro/*
