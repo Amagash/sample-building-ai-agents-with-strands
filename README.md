@@ -4,10 +4,6 @@ This repository contains a comprehensive tutorial series for building AI agents 
 
 ## Prerequisites
 
-### System Requirements
-- **Python 3.10+** installed on your system
-- **LLM API access** (examples use Claude, but Strands supports various models)
-
 ### Installation
 
 1. **Create a virtual environment:**
@@ -24,13 +20,6 @@ This repository contains a comprehensive tutorial series for building AI agents 
    ```bash
    pip install -r requirements.txt
    ```
-
-### Model Configuration
-
-Configure your preferred LLM provider. The examples use Claude models, but Strands is framework-agnostic:
-- **AWS Bedrock (Claude)**: Configure AWS credentials via CLI, environment variables, or IAM roles
-- **OpenAI**: Set `OPENAI_API_KEY` environment variable
-- **Other providers**: Follow Strands documentation for your chosen model
 
 ## Tutorial Structure
 
