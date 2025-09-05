@@ -1,4 +1,4 @@
-# Building AI Agents with Strands - Complete Tutorial
+# Building AI Agents with Strands
 
 This repository contains a comprehensive tutorial series for building AI agents using the Strands framework, based on the AWS Builder article series.
 
