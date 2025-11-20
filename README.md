@@ -6,20 +6,40 @@ This repository contains a comprehensive tutorial series for building AI agents 
 
 ### Installation
 
-1. **Create a virtual environment:**
+This project uses [uv](https://docs.astral.sh/uv/) for fast and reliable Python package management.
+
+1. **Install uv (if not already installed):**
    ```bash
-   python -m venv .venv
+   # macOS/Linux
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   
+   # Or with Homebrew
+   brew install uv
+   
+   # Or with pip
+   pip install uv
    ```
 
-2. **Activate the virtual environment:**
-   - **macOS/Linux:** `source .venv/bin/activate`
-   - **Windows (CMD):** `.venv\Scripts\activate.bat`
-   - **Windows (PowerShell):** `.venv\Scripts\Activate.ps1`
-
-3. **Install required packages:**
+2. **Create a virtual environment and install dependencies:**
    ```bash
-   pip install -r requirements.txt
+   # Create virtual environment and install all dependencies in one command
+   uv sync
+   
+   # Activate the virtual environment
+   # macOS/Linux:
+   source .venv/bin/activate
+   # Windows (CMD):
+   .venv\Scripts\activate.bat
+   # Windows (PowerShell):
+   .venv\Scripts\Activate.ps1
    ```
+
+**Alternative:** If you prefer using pip:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # or equivalent for your OS
+pip install -r requirements.txt
+```
 
 ## Tutorial Structure
 
@@ -53,6 +73,7 @@ Build distributed multi-agent systems.
    ```bash
    git clone <repository-url>
    cd strands-tutorial
+   uv sync
    source .venv/bin/activate  # or equivalent for your OS
    ```
 
