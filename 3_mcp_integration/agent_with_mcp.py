@@ -65,7 +65,7 @@ from strands.tools.mcp import MCPClient
 from mcp.client.streamable_http import streamablehttp_client
 
 def main():
-  mcp_server = MCPClient(lambda: streamablehttp_client('http://127.0.0.1:8000/mcp'))
+  mcp_server = MCPClient(lambda: streamablehttp_client('http://127.0.0.1:8080/mcp'))
 
   with mcp_server:
     mcp_tools = mcp_server.list_tools_sync()
