@@ -1,13 +1,14 @@
-from strands_tools.calculator import calculator
 from strands import Agent
 from strands.multiagent.a2a import A2AServer
+from strands_tools.calculator import calculator
+
+
 
 # Create a Strands agent
 strands_agent = Agent(
     name="Calculator Agent",
     description="A calculator agent that can perform basic arithmetic operations.",
     tools=[calculator],
-    model="us.anthropic.claude-3-5-haiku-20241022-v1:0",
     callback_handler=None
 )
 

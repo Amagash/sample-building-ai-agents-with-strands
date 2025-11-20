@@ -7,7 +7,6 @@ strands_agent = Agent(
     name="Current time Agent",
     description="An agent that gives the current time",
     tools=[current_time],
-    model="us.anthropic.claude-3-5-haiku-20241022-v1:0",
     callback_handler=None
 )
 

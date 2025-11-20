@@ -5,13 +5,14 @@ import uvicorn
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from utils import A2AClientToolProvider
+from strands_tools.a2a_client import A2AClientToolProvider
 
 # Define request model for the inquire endpoint
 class InquireRequest(BaseModel):
     question: str
 
 # Create A2AClientToolProvider pointing to the 3 agents
+
 provider = A2AClientToolProvider(known_agent_urls=[
     "http://127.0.0.1:8001",  # Time Agent
     "http://127.0.0.1:8002",  # Calculator Agent
@@ -26,7 +27,6 @@ print(f"A2A tools available: {[tool.tool_name for tool in a2a_tools]}")
 agent = Agent(
     name="Orchestrator Agent",
     tools=a2a_tools,
-    model="us.anthropic.claude-3-5-haiku-20241022-v1:0",
     description="An orchestrator that delegates questions to specialized agents using A2A communication",
     system_prompt="""You are an orchestrator that MUST always delegate ALL questions to specialized agents using A2A communication.
 

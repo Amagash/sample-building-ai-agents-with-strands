@@ -7,7 +7,6 @@ strands_agent = Agent(
     name="Web Agent",
     description="An agent that can make http requests to look for information",
     tools=[http_request],
-    model="us.anthropic.claude-3-5-haiku-20241022-v1:0",
     callback_handler=None
 )
 
